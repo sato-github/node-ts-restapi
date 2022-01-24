@@ -52,3 +52,20 @@ export async function getUserSessionHandler(req: Request, res: Response) {
 
   return res.send(sessions);
 }
+
+// interface User {
+//   id:string
+//   quantity:number
+// }
+
+// interface Admin {
+//   id:string
+//   quantity:number
+//   adminFlg:boolean
+// }
+
+// function echo<T extends {quantity:number}>(params: T):T {
+//   console.log("params.quantity :", params.quantity);
+
+//   return params
+// }

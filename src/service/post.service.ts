@@ -10,7 +10,7 @@ export function createPost(input: DocumentDefinition<PostDocument>) {
   try {
     return Post.create(input);
   } catch (error) {
-    throw new Error(error);
+    console.error(error);
   }
 }
 

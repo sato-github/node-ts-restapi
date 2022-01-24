@@ -1,0 +1,29 @@
+// health check
+GET http://localhost:8080/healthcheck
+
+###
+// create user
+POST http://localhost:8080/api/users
+content-type: application/json
+
+{
+    "email": "sample@test.com",
+    "password": "test1234",
+    "name":"test"
+}
+
+###
+// login
+POST http://localhost:8080/api/sessions
+content-type: application/json
+
+{
+    "email": "sample@test.com",
+    "password": "test1234"
+}
+
+###
+
+GET http://localhost:8080/api/sessions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVlYmM2MmE0NTc1ZDAwMmJlNjk0NWEiLCJlbWFpbCI6InNhbXBsZUB0ZXN0LmNvbSIsIm5hbWUiOiJ0ZXN0IiwiY3JlYXRlZEF0IjoiMjAyMi0wMS0yNFQxNDo0OTowNi4yNjFaIiwidXBkYXRlZEF0IjoiMjAyMi0wMS0yNFQxNDo0OTowNi4yNjFaIiwiX192IjowLCJzZXNzaW9uIjoiNjFlZWJkYjhhNDU3NWQwMDJiZTY5NDYwIiwiaWF0IjoxNjQzMDM2MDg4LCJleHAiOjE2NDMwMzY5ODh9.9HXdHDObMsgHOYHa-sGLCA4qpfaTVj9Hy6Kqm-S0sRk
+x-refresh: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2YWxpZCI6dHJ1ZSwiX2lkIjoiNjFlZWJkZmVhNDU3NWQwMDJiZTY5NDY0IiwidXNlciI6IjYxZWViYzYyYTQ1NzVkMDAyYmU2OTQ1YSIsInVzZXJBZ2VudCI6InZzY29kZS1yZXN0Y2xpZW50IiwiY3JlYXRlZEF0IjoiMjAyMi0wMS0yNFQxNDo1NTo1OC4yNjNaIiwidXBkYXRlZEF0IjoiMjAyMi0wMS0yNFQxNDo1NTo1OC4yNjNaIiwiX192IjowLCJpYXQiOjE2NDMwMzYxNTgsImV4cCI6MTY3NDU5Mzc1OH0.bKiEllWLbjR-YVArQnF_MHKVo6ekoLjTsqtee8Yq9Ak

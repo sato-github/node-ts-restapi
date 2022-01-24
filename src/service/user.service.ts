@@ -7,7 +7,9 @@ export async function createUser(input: DocumentDefinition<UserDocument>) {
   try {
     return await User.create(input);
   } catch (error) {
-    throw new Error(error);
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
   }
 }
 
